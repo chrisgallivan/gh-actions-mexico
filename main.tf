@@ -12,15 +12,6 @@ terraform {
     }
   }
 }
-variable "CLIENT_ID" {
-}
-variable "CLIENT_SECRET" {
-}
-variable "SUBSCRIPTION_ID" {
-}
-variable "TENANT_ID" {
-}
-
 provider "azurerm" {
   client_id       = var.CLIENT_ID
   client_secret   = var.CLIENT_SECRET
