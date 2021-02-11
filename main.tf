@@ -29,14 +29,11 @@ provider "azurerm" {
   features {}
 }
 
-module "web_app_container" {
-  source = "innovationnorway/web-app-container/azurerm"
-
-  name = "kata-friday-test"
-
-  resource_group_name = "hugo-resources"
-
-  container_type = "docker"
-
-  container_image = "chrisgallivan/hugo-cicd:latest"
+module azure_app_service_container {
+  source  = "git::https://github.com/chrisgallivan/azure_app_service_container.git"
+  resource_group_name = "kata-friday-resources"
+  app_service_plan_name = "kata-friday-test"
+  app_service_name = "kata-friday-test"
+  location = "eastus"
+  image_name = "chrisgallivan/hugo-cicd:latest"
 }
