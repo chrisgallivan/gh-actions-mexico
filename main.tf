@@ -30,7 +30,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "kata-friday-test"
+  name     = "hugo-resources"
   location = "eastus"
 }
 
