@@ -29,17 +29,12 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "hugo-resources"
-  location = "eastus"
-}
-
 module "web_app_container" {
   source = "innovationnorway/web-app-container/azurerm"
 
   name = "kata-friday-test"
 
-  resource_group_name = azurerm_resource_group.example.name
+  resource_group_name = "hugo-resources"
 
   container_type = "docker"
 
