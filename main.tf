@@ -8,7 +8,7 @@ terraform {
   backend "remote" {
     organization = "KATA-FRIDAYS"
     workspaces {
-      name = "kata-friday-test"
+      name = "kata-friday-mexico"
     }
   }
 }
@@ -32,8 +32,8 @@ provider "azurerm" {
 module "azure_app_service_container" {
   source                = "git::https://github.com/chrisgallivan/azure_app_service_container.git"
   resource_group_name   = "kata-fridays"
-  app_service_plan_name = "kata-friday-asp-test"
-  app_service_name      = "kata-friday-app-service-test"
+  app_service_plan_name = "kata-friday-asp-mexico"
+  app_service_name      = "kata-friday-app-service-mexico"
   location              = "eastus"
   image_name            = "chrisgallivan/hugo-cicd:latest"
 }
