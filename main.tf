@@ -31,7 +31,7 @@ provider "azurerm" {
 
 module "azure_app_service_container" {
   source                = "git::https://github.com/chrisgallivan/azure_app_service_container.git"
-  resource_group_name   = "kata-friday-resources"
+  resource_group_name   = "kata-fridays"
   app_service_plan_name = "kata-friday-asp"
   app_service_name      = "kata-friday-app-service"
   location              = "eastus"
